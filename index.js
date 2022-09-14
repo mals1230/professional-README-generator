@@ -10,7 +10,7 @@ console.log("Answer the following prompts to quickly create a professional READM
 const questions = [
     {
         type: 'input',
-        name: 'Title',
+        name: 'title',
         message: 'What is the name of your project?',
         validate: userTitle => {
             if (userTitle) {
@@ -23,8 +23,8 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'Description',
-        message: 'Please give a brief description of your project.',
+        name: 'description',
+        message: 'Please give a brief description of your project:',
         validate: userDescription => {
             if (userDescription) {
                 return true;
@@ -36,21 +36,8 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'TOC',
-        message: 'Table of Contents',
-        validate: userTOC => {
-            if (userTOC) {
-                return true;
-            } else {
-                console.log('Enter your table of contents to continue.');
-                return false;
-            }
-        }
-    },
-    {
-        type: 'input',
-        name: 'Installation',
-        message: 'Please provide installation instructions.',
+        name: 'installation',
+        message: 'Please provide installation instructions:',
         validate: userInstallation => {
             if (userInstallation) {
                 return true;
@@ -62,7 +49,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'Usage',
+        name: 'usage',
         message: 'How do you use this project?',
         validate: userUsage => {
             if (userUsage) {
@@ -75,8 +62,8 @@ const questions = [
     },
     {
         type: 'checkbox',
-        name: 'License',
-        message: 'Choose a license for your project',
+        name: 'license',
+        message: 'Choose a license for your project:',
         choices: ['Apache 2.0', 'GNU General Public v3.0', 'MIT', 'BSD 2-Clause "Simplified"', 'BSD 3-Clause "New" or "Revised"', 'Boost Software 1.0', 'Creative Commons Zero v1.0 Universal', 'Eclipse Public 2.0', 'GNU Affero General Public v3.0', 'GNU General Public v2.0', 'GNU Lesser General Public v2.1', 'Mozilla Public 2.0', 'The Unlicense'],
         validate: userLicense => {
             if (userLicense) {
@@ -89,8 +76,8 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'Contribute',
-        message: 'Contribution guidelines',
+        name: 'contribute',
+        message: 'Contribution guidelines:',
         validate: userContribute => {
             if (userContribute) {
                 return true;
@@ -102,8 +89,8 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'Test',
-        message: 'Please enter testing instructions',
+        name: 'test',
+        message: 'Please enter testing instructions:',
         validate: userTest => {
             if (userTest) {
                 return true;
@@ -115,8 +102,8 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'GH',
-        message: 'Enter your GitHub username for additional questions',
+        name: 'gh',
+        message: 'Enter your GitHub username:',
         validate: userGH => {
             if (userGH) {
                 return true;
@@ -129,7 +116,7 @@ const questions = [
     {
         type: 'input',
         name: 'email',
-        message: 'Enter your email address for additional questions',
+        message: 'Enter your email address for additional questions:',
         validate: userEmail => {
             if (userEmail) {
                 return true;
