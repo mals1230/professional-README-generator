@@ -1,4 +1,6 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
+const { default: ListPrompt } = require("inquirer/lib/prompts/list")
+
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license==="Apache 2.0"){
@@ -79,14 +81,13 @@ function renderLicenseSection(license) {
   if (license==="none"){
     return ""
   }
-
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
 
-  ${renderLicenseBadge}
+  ${renderLicenseBadge(data.license)}
 
   ## Table of Contents
   - [Description] (#description)
@@ -104,7 +105,8 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
   ## License
-  ${data.license}
+  ${renderLicenseLink(data.license)}
+  ${renderLicenseSection(data.license)}
   ## Contribution
   ${data.contribution}
   ## Testing

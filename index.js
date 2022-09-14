@@ -29,7 +29,7 @@ const questions = [
         message: 'How do you use this project?',
     },
     {
-        type: 'checkbox',
+        type: 'list',
         name: 'license',
         message: 'Choose a license for your project:',
         choices: ['Apache 2.0', 'GNU General Public v3.0', 'MIT', 'None'],
@@ -37,7 +37,7 @@ const questions = [
     {
         type: 'input',
         name: 'contribution',
-        message: 'Contribution guidelines:',
+        message: 'Can contributions be made - and if so, how?',
     },
     {
         type: 'input',
