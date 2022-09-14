@@ -1,4 +1,6 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
+// const { default: List}
+
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {}
 
@@ -14,24 +16,26 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `# ${data.title}
   ## Table of Contents
-  - [Description] (#Description)
-  - [Installation] (#Installation)
-  - [Usage] (#Usage)
-  - [Contribution] (#Contribution)
-  - [Testing] (#Testing)
-  - [Questions]] (#Questions)
+  - [Description] (#description)
+  - [Installation] (#installation)
+  - [Usage] (#usage)
+  - [Contribution] (#contribution)
+  - [Testing] (#testing)
+  - [Questions]
   
   ## Description:
   ${data.description}
   ## Installation:
   ${data.installation}
   ## Usage:
-
+  ${data.usage}
   ## Contribution:
-
+  ${data.contribution}
   ## Testing:
-
-  ## Questions:
+  ${data.testing}
+  ## Questions or Comments:
+  - GitHub: [${data.gh}](https://github.com/${data.gh})
+  - Email: [${data.email}](malto:${data.email})
 `;
 }
 
