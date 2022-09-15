@@ -5,7 +5,7 @@ const generateMarkdown = require('./utils/generateMarkdown')
 
 // TODO: Create an array of questions for user input 
 // (questions - title, description, table of contents, installtion, usage, license, contributing, tests, GitHub, and questions)
-console.log("Answer the following prompts to quickly create a professional READM for new projects")
+console.log("Answer the following prompts to quickly create a professional README for new projects")
 
 const questions = [
     {

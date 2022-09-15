@@ -90,40 +90,40 @@ function generateMarkdown(data) {
   ${renderLicenseBadge(data.license)}
 
   ## Table of Contents
-  - [Project Description:] (#description)
-  - [Installation:] (#installation)
-  - [Usage:] (#usage)
-  - [License:] (#license)
-  - [Contribution:] (#contribution)
-  - [Testing:] (#testing)
-  - [Questions or Comments:] (#questions)
+  - [Project Description:](#description)
+  - [Installation:](#installation)
+  - [Usage:](#usage)
+  - [License:](#license)
+  - [Contribution:](#contribution)
+  - [Testing:](#testing)
+  - [Questions or Comments:](#questions)
   
-  <a name="description"></a>
+
   ## Project Description:
   ${data.description}
   
-  <a name="installation"></a>
+
   ## Installation:
   ${data.installation}
   
-  <a name="usage"></a>
+
   ## Usage:
   ${data.usage}
   
-  <a name="license"></a>  
+
   ## License:
   ${renderLicenseLink(data.license)}
   ${renderLicenseSection(data.license)}
   
-  <a name="contribution"></a>
+
   ## Contribution:
   ${data.contribution}
   
-  <a name="testing"></a>
+
   ## Testing:
   ${data.testing}
   
-  <a name="questions"></a>
+
   ## Questions or Comments:
   - GitHub: [${data.gh}](https://github.com/${data.gh})
   - Email: [${data.email}](malto:${data.email})
